@@ -1,0 +1,78 @@
+begin function test(var x,var y);
+
+var p = true;
+var t = x;
+var u = y;
+
+var int = 5;
+var string = "Test String";
+var float = 5.5;
+var bool = true;
+
+var holder1;
+begin if (t == u);
+    holder1 = true;
+end if;
+begin else;
+    holder1 = false;
+end else;
+
+
+var holder2;
+begin if (int > 5);
+    holder2 = true;
+end if;
+    begin else-if(int < 5);
+        holder2 = false;
+    end else-if;
+       begin else;
+        holder2 = false;
+       end else;
+
+
+begin loop (int < 10);
+    int = int + 1;
+end loop;
+
+
+begin loop (var p = 0; p < 10; p = p + 1);
+    int = int + 1;
+end loop;
+
+begin loop;
+int = int + 1;
+end loop(int < 10);
+
+begin switch(int);
+case 1:
+    int = 1;
+    break;
+case 2:
+    int = 2;
+    break;
+default:
+    int = 3;
+end switch;
+
+var l = [5];
+l[0] = 1;
+
+var m = l[0];
+
+var n = l[0] != m;
+
+end test;
+
+test(3, 4);
+
+var h = fourtimes2(3);
+var m = h / (0 + 1);
+
+begin function fourtimes2(var x);
+    return 4 * 2;
+end function;
+
+var t = true;
+begin if(3 == 3 && 2 != 3 || t || 45 >= 3 || 8 <=3);
+    var b = 2;
+end if;
